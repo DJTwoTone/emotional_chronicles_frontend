@@ -11,13 +11,26 @@ function WritingInspiration({ inspiration, setInspiration }) {
     const [insp, setInsp] = useState('')
     const [inspMessage, setInspMessage] = useState('')
 
-    async function getInspiration() {
-        const gottenInspiration = await ECApi.getInspiration();
-        setInspiration(gottenInspiration[0])
-    }
+    // async function getInspiration() {
+    //     const gottenInspiration = await ECApi.getInspiration();
+    //     setInspiration(gottenInspiration[0])
+    // }
+
+    // useEffect(() => {
+    //     getInspiration();
+    // }, [])
 
     useEffect(() => {
-        getInspiration();
+        async function getInspiration() {
+            try {
+                const gottenInspiration = await ECApi.getInspiration();
+                setInspiration(gottenInspiration[0])
+                
+            } catch (err) {
+                console.error(err);
+            }
+        } 
+        getInspiration()
     }, [])
 
     function handleChange(evt) {

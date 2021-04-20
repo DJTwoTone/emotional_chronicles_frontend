@@ -7,12 +7,25 @@ import Button from 'react-bootstrap/Button';
 
 function WritingPrompt({ prompt, setPrompt }) {
 
-    async function getPrompt() {
-        const gottenPrompt = await ECApi.getPrompt();
-        setPrompt(gottenPrompt[0]) 
-    }
+    // async function getPrompt() {
+    //     const gottenPrompt = await ECApi.getPrompt();
+    //     setPrompt(gottenPrompt[0]) 
+    // }
     
+    // useEffect(() => {
+    //     getPrompt();
+    // }, [])
+
     useEffect(() => {
+        async function getPrompt() {
+            try {
+                const gottenPrompt = await ECApi.getPrompt();
+                setPrompt(gottenPrompt[0]) 
+                
+            } catch (err) {
+                console.error(err);
+            }
+        }
         getPrompt();
     }, [])
 
