@@ -1,33 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
-import ECApi from './ECApi';
 
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
-function WritingPrompt({ prompt, setPrompt }) {
-
-    // async function getPrompt() {
-    //     const gottenPrompt = await ECApi.getPrompt();
-    //     setPrompt(gottenPrompt[0]) 
-    // }
-    
-    // useEffect(() => {
-    //     getPrompt();
-    // }, [])
-
-    useEffect(() => {
-        async function getPrompt() {
-            try {
-                const gottenPrompt = await ECApi.getPrompt();
-                setPrompt(gottenPrompt[0]) 
-                
-            } catch (err) {
-                console.error(err);
-            }
-        }
-        getPrompt();
-    }, [])
+function WritingPrompt({ prompt, getPrompt }) {
 
 
     return (
