@@ -8,6 +8,7 @@ import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import Spinner from 'react-bootstrap/Spinner'
 
 
 
@@ -18,9 +19,12 @@ function Inspiration () {
     const [inspiration, setInspiration] = useState([]);
     const [insp, setInsp] = useState([])
     const [inspMessage, setInspMessage] = useState('');
+    const [loading, setLoading] = useState(false);
 
     async function getInspiration() {
+        setLoading(true)
         const gottenInspiration = await ECApi.getInspiration(15);
+        setLoading(false)
         setInspiration(gottenInspiration)
     }
 
@@ -66,7 +70,18 @@ function Inspiration () {
                 <Card.Header className='display-3 shadow'>Something to inspire you...</Card.Header>
                 
                 <ListGroup className="my-2">
-                
+                {loading 
+                ?   <>
+                    <Spinner animation="grow" variant="dark" size="sm"/>
+                    <Spinner animation="grow" variant="dark" size="sm"/>
+                    <Spinner animation="grow" variant="dark" />
+                    <span><p>LOADING</p></span>
+                    <Spinner animation="grow" variant="dark" size="sm"/>
+                    <Spinner animation="grow" variant="dark" size="sm"/>
+                    <Spinner animation="grow" variant="dark" />
+                    </>
+                : null
+                }
                 {inspList}
 
                 </ListGroup>
