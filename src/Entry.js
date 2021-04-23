@@ -1,17 +1,20 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
 import { DateTime } from 'luxon'
 
 import ECApi from './ECApi';
 import emotionalMath from './hooks/emotionalMath';
 
-import EntryChart from './EntryChart'
+import EntryChart from './EntryChart';
+import Loader from './Loader'
 
 import UserContext from './UserContext';
 
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
+import Button from 'react-bootstrap/Button';
 
 function Entry() {
 
@@ -24,12 +27,14 @@ function Entry() {
 
     const [displayedEntry, setDisplayedEntry] = useState({})
     const [entryEmotions, setEntryEmotions] = useState([]);
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         async function fetchDiaryEntry() {
             try {
+                setLoading(true)
                 let entryData = await ECApi.getEntry(username, date);
-
+                setLoading(false)
                 setDisplayedEntry(entryData)
             }  catch (err) {
                 console.error(err)
@@ -49,6 +54,10 @@ function Entry() {
 
         <Container className='justify-content-center m-5'>
 
+            {loading 
+            ? <Loader />
+            : null
+            }
 
             <Card>
                 <Card.Header>
@@ -95,7 +104,18 @@ function Entry() {
                     <EntryChart data={displayedEntry} />
                 </Card.Body>
             </Card>
-            
+            <div className='row g-1 justify-content-around m-3'>
+                <Link to={`/fulldiary/${loggedInUser.username}`}>
+                    <Button variant='dark' size='lg' block>
+                        All Entries
+                    </Button>
+                </Link>
+                <Link to={'/calendar'}>
+                    <Button variant='dark' size='lg' block>
+                        Calendar
+                    </Button>
+                </Link>
+            </div>
          </Container>
 
 

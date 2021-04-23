@@ -5,16 +5,20 @@ import Container from 'react-bootstrap/Container';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
 
+import Loader from './Loader'
+
 
 function Admin () {
 
     const [flaggedInspiration, setFlaggedInspiration] = useState([])
     const [inspirationMessage, setInspirationMessage] = useState('')
     const [message, setMessage] = useState('');
+    const [loading, setLoading] = useState(false);
 
     async function getFlaggedInspiration() {
+        setLoading(true)
         const returnedFlagged = await ECApi.getFlaggedInspiration();
-
+        setLoading(false)
         setFlaggedInspiration(returnedFlagged.flagged)
         setInspirationMessage(returnedFlagged.message)
     }
@@ -50,6 +54,11 @@ function Admin () {
         <Container fluid className=' justify-content-center m-2'> 
             <h2>{inspirationMessage}</h2>
             <p>{message}</p>
+
+            {loading 
+            ? <Loader />
+            : null
+            }
             
         {flaggedInspiration 
         

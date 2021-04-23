@@ -34,8 +34,8 @@ function FullDiary () {
         return (
             
             arr.map((entry) => (
-                <Link to={`/entry/${loggedInUser.username}/${DateTime.fromJSDate(entry.date).toISODate()}`}>
-                <Card className='my-5 shadow'>
+                <Link to={`/entry/${loggedInUser.username}/${entry.date}`}>
+                <Card className='my-5 shadow' key={entry.id}>
                     <Card.Header className='text-start'>{DateTime.fromISO(entry.date).toLocaleString({ weekday: 'long', month: 'long', day: '2-digit' })}</Card.Header>
                     <Card.Body>
                         <blockquote className='blockquote'>
@@ -77,7 +77,7 @@ function FullDiary () {
             }
 
 
-
+            {/* button to calendar and button to full list */}
         </Container>
         )
 }

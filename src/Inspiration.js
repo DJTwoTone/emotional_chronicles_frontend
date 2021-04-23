@@ -8,7 +8,8 @@ import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import Spinner from 'react-bootstrap/Spinner'
+
+import Loader from './Loader'
 
 
 
@@ -71,15 +72,7 @@ function Inspiration () {
                 
                 <ListGroup className="my-2">
                 {loading 
-                ?   <>
-                    <Spinner animation="grow" variant="dark" size="sm"/>
-                    <Spinner animation="grow" variant="dark" size="sm"/>
-                    <Spinner animation="grow" variant="dark" />
-                    <span><p>LOADING</p></span>
-                    <Spinner animation="grow" variant="dark" size="sm"/>
-                    <Spinner animation="grow" variant="dark" size="sm"/>
-                    <Spinner animation="grow" variant="dark" />
-                    </>
+                ? <Loader />
                 : null
                 }
                 {inspList}
