@@ -21,6 +21,7 @@ function Diary () {
     const [entry, setEntry] = useState("");
     const [prompt, setPrompt] = useState({});
     const [inspiration, setInspiration] = useState("");
+    const [errors, setErrors] = useState("");
 
     const { loggedInUser, todaysEntry, setTodaysEntry } = useContext(UserContext);
 
@@ -37,6 +38,7 @@ function Diary () {
                 const p = await ECApi.getPrompt();
                 setPrompt(p[0])
             } catch (err) {
+                setErrors(err)
                 console.error(err);
             }
         }
@@ -54,6 +56,7 @@ function Diary () {
                 const insp = await ECApi.getInspiration();
                 setInspiration(insp[0])
             } catch (err) {
+                setErrors(err)
                 console.error(err);
             }
         }
@@ -87,6 +90,7 @@ function Diary () {
             
 
         } catch (err) {
+            setErrors(err)
             console.error(err);
         }
     }
@@ -101,6 +105,10 @@ function Diary () {
         <Container fluid className='justify-content-center my-5'>
         <FeelingsCloud className='m-4' feelings={feelings} setFeelings={setFeelings} />
         <WritingPrompt prompt={prompt} getPrompt={getPrompt} />
+        {errors
+        ? <h2 class="text-warning">{errors}</h2>
+        : null
+        }
         <Form className='m-4 shadow' onSubmit={handleSubmit}>
             <Form.Group controlId='diaryEntry'>
                 <div  id='pattern'>
