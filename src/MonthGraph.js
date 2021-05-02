@@ -1,3 +1,11 @@
+/**
+ * This is the component showing users their emotions over a month.
+ * 
+ * So much that I played with. So, much that can still be played with.
+ * 
+ */
+
+
 import React, { useContext, useEffect, useState } from 'react';
 import { LineChart, Line, XAxis, YAxis, Legend, ResponsiveContainer, CartesianGrid, Tooltip} from 'recharts';
 

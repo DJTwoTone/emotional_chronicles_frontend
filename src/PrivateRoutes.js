@@ -1,3 +1,8 @@
+/**
+ * Just a simple comonment to protect routes from people who aren't logged in.
+ * 
+ */
+
 import React, { useContext } from 'react'
 import { Route, Redirect } from 'react-router-dom';
 import UserContext from './UserContext';

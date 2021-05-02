@@ -1,3 +1,9 @@
+/**
+ * Our beautiful Navigation component.
+ * 
+ * Notice the several versions that are available. Logged in? Regular user? Admin? I got it all!!!
+ */
+
 import React, { useContext } from 'react';
 
 import UserContext from './UserContext';

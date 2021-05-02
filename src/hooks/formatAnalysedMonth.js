@@ -1,3 +1,16 @@
+/**
+ * This hook is formatting the returned diaries from use with React Calendar and Charts.js
+ * 
+ * First, we need to format a list to add empty days for the chart
+ * 
+ * Then, we need list of datesd that need to be disabled in the calendar because no diary entry was made on that day.
+ * 
+ * And then, we need a list of dates and colors to show the dominant emotion on any day where there is an entry.
+ * 
+ * It could use some refactoring.
+ */
+
+
 import ECApi from '../ECApi';
 import { DateTime } from 'luxon'
 

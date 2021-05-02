@@ -1,3 +1,9 @@
+/**
+ * This is a basic explaination, for users, of how the diary works.
+ * 
+ * It could be more creative and look nicer.
+ */
+
 import React from 'react';
 
 import { Link } from 'react-router-dom';

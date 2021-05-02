@@ -1,3 +1,8 @@
+/**
+ * This is a simple hook for using the local storage. I really like it!
+ */
+
+
 import { useState, useEffect} from 'react';
 
 

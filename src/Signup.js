@@ -1,3 +1,7 @@
+/**
+ * Just a basic signup form. Nothing special to see here.
+ */
+
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 

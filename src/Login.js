@@ -1,3 +1,8 @@
+/**
+ * Basic login in component. Nothing special here
+ * 
+ */
+
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 

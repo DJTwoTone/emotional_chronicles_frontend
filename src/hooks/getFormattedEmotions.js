@@ -1,3 +1,10 @@
+/**
+ * This is a hook for formatting emotions for the random emotion cloud on the diary entry page.
+ * 
+ * I played with this for WAAAYYYY too long. I could use so other eyesd or thoughts on it.
+ */
+
+
 import ECApi from '../ECApi';
 
 

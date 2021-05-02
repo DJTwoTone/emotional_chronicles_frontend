@@ -1,3 +1,8 @@
+/** 
+ * This component creates a basic list of all if a user's diary entries. 
+ * Clicking on any entry will take the use to a more detailed view.
+ */
+
 import React, {useState, useEffect, useContext} from 'react';
 import { Link } from 'react-router-dom';
 

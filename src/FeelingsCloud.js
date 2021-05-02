@@ -1,3 +1,10 @@
+/**
+ * This component creates a work cloud of emotions for a user to select from.
+ * 
+ * 
+ */
+
+
 import React, { useEffect, useState } from 'react';
 import { TagCloud } from 'react-tagcloud'
 

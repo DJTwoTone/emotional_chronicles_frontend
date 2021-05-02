@@ -1,3 +1,10 @@
+/**
+ * A simple component to display and refresh writing prompts.
+ * 
+ * It's being used in the Diary component.
+ * 
+ */
+
 import React from 'react';
 
 

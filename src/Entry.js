@@ -1,3 +1,10 @@
+/**
+ * This component displays all the gathered information for a give diary entry. 
+ * 
+ * This is where the emotional math is used
+ */
+
+
 import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';

@@ -1,3 +1,10 @@
+/**
+ * a simple component to display, referfesh, and share inspirational quotes.
+ * 
+ * It's being used in the Diary component.
+ * 
+ */
+
 import React, { useState } from 'react';
 
 import ECApi from './ECApi';

@@ -1,3 +1,13 @@
+/**
+ * 
+ * These are all the routes that our app uses.
+ * 
+ * Home, Inspirations, How it works, Login, and Signup are all unprotected, anyone should have access to them.
+ * 
+ * The rest are protected and should redirect to home if someone tries to access them without premission 
+ */
+
+
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 

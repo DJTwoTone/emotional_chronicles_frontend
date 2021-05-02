@@ -1,3 +1,16 @@
+/**
+ * This is the dairy entry form.
+ * 
+ * It has a few parts.
+ * 
+ * There is a work cloud that displays a group of random emotions for the user to select
+ * Next, there is a writing prompt, user have the ability to change the prompt if they are given one they don't like.
+ * Then, we have the main writing area.
+ * Finally, there is an inspirational quote for the user, they user is able to change the quote as well as share a quote if they wish.
+ * 
+ * 
+ */
+
 import React, { useContext, useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { DateTime } from 'luxon'

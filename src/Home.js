@@ -1,3 +1,10 @@
+/**
+ * This is the basic home page.
+ * 
+ * Notice that being logged in or logged out will create slight differences.
+ * 
+ */
+
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 

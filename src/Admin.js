@@ -1,3 +1,8 @@
+/**
+ * The functionality of the Admin page is only for inspriational quotes at the moment, but it could be expanded to include prompts and emotions
+ * In addition, it could also do some work with adding prompts, quotes, and emotions, and editing/helping users
+ */
+
 import React, { useState, useEffect } from 'react';
 import ECApi from './ECApi';
 

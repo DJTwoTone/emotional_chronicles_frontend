@@ -1,3 +1,8 @@
+/**
+ * Just setting up some context here.
+ * 
+ */
+
 import React from 'react';
 
 

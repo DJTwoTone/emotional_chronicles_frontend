@@ -1,3 +1,9 @@
+/**
+ * If ever a user is in need of inspiration, this component will display a list of inspirational quotes for them.
+ * 
+ * It will also allow them to share something inspirational.
+ */
+
 import React, { useState, useEffect, useContext } from 'react';
 
 import ECApi from './ECApi';

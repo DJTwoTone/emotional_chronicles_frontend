@@ -1,3 +1,8 @@
+/** 
+ * This is our API helper. It gives us access to the backend in one nice little package.
+ */
+
+
 import axios from 'axios';
 
 import { LOCAL_STORAGE_TOKEN_ID } from './App';

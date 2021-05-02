@@ -1,3 +1,11 @@
+/**
+ * This component creates a polar graph to display a users emotions on a particular day
+ * 
+ * May other intesting things could be done with the styling.
+ * 
+ */
+
+
 import React from 'react';
 import {RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, ResponsiveContainer} from 'recharts';
 

@@ -1,3 +1,9 @@
+/**
+ * This is the base app component.
+ * We are holding logged in users through a token, and displaying the navigation bar seperate from the body of the page.
+ * It's also defining context to be used in other parts of the app. 
+ */
+
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { decode } from 'jsonwebtoken';

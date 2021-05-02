@@ -1,3 +1,12 @@
+/**
+ * This component uses react-calendar to display a calendar of the users diary entries.
+ * Days that have an entry should display the dominant ermotion for that day. Days that do not have an entry should be disabled.
+ * Clicking on a day, should link to that days diary entry.
+ * 
+ * In addition, users can see a graph displaying there emotions over the month as well as get access to a list of all their diary entries
+ */
+
+
 import React, { useContext, useEffect, useState } from 'react';
 import { DateTime } from 'luxon'
 
