@@ -58,7 +58,7 @@ function Home () {
         <h1>Welcome to your Emotional Chronicles</h1>
         <Image src={diaryhero} fluid/>
         {loggedInUser ? loggedIn() : loggedOut()}
-        
+        <p className="text-danger fst-italic">This diary is for entertainment purposes only. We are not psychologists.</p>
         </div>
             )
 }
